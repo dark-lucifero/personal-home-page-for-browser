@@ -72,7 +72,7 @@ addUrls.addEventListener('submit', (e) => {
 function addButton() {
      const html = `
         <div class="addButton commonUsed" >
-            <img src="add.svg" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" class="logo" viewBox="0 0 512 512"><path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 112v288M400 256H112"/></svg>
             <div class="name">addUrl</div>
         </div>`
     return html;
