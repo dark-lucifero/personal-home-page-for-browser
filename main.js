@@ -72,7 +72,7 @@ addUrls.addEventListener('submit', (e) => {
 function addButton() {
      const html = `
         <div class="addButton commonUsed" >
-            <img src="./add.svg" class="logo">
+            <img src="https://github.com/muhamadDev/personal-home-page-for-browser/add.svg" class="logo">
             <div class="name">addUrl</div>
         </div>`
     return html;
