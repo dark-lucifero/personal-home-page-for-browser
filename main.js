@@ -83,3 +83,31 @@ function addButton() {
 if (commonUsedContainer.children.length % 2 !== 0) {
     commonUsedContainer.classList.add('odd-children');
 }
+
+const commonUseds = document.querySelectorAll('.commonUsed');
+
+commonUseds.forEach((commonUsed) => {
+    let timer;
+    const holdTime = 5000;
+    
+    commonUsed.addEventListener('click', () => {
+        window.open(commonUsed.dataset.url)
+    });
+    
+    commonUsed.addEventListener('touchstart', () => {
+        timer = setTimeout(() => {
+            let urls = JSON.parse(localStorage.getItem('urls')) || [];
+            urls = urls.filter((url) => url !== commonUsed.dataset.url)
+            
+            localStorage.setItem('urls', JSON.stringify(urls));
+            getUrls()
+        }, holdTime);
+    });
+    
+    commonUsed.addEventListener('touchend', () => {
+        clearTimeout(timer); 
+    });
+})
+
+
+
