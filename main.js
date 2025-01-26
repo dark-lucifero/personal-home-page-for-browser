@@ -5,7 +5,7 @@ searchContainer.addEventListener('submit', (e) => {
     const inputValue = e.target[0].value
     
     const url = `https://www.google.com/search?q=${inputValue}&oq=${inputValue}&gs_lcrp=EgZjaHJvbWUqDAgAECMYJxiABBiKBTIMCAAQIxgnGIAEGIoFMgoIARAuGLEDGIAEMgoIAhAuGLEDGIAEMgoIAxAuGLEDGIAEMg0IBBAuGIMBGLEDGIAEMg0IBRAuGMcBGNEDGIAEMgoIBhAAGLEDGIAEMgcIBxAAGIAEMgcICBAuGIAEMgcICRAAGIAEMgcIChAuGIAEMgcICxAAGIAEMgcIDBAuGIAEMgcIDRAuGIAEMgcIDhAAGIAE0gEHODYxajBqMagCALACAA&sourceid=chrome-mobile&ie=UTF-8&hl=en`
-    window.open(url)
+    document.location.href = url
 })
 
 
